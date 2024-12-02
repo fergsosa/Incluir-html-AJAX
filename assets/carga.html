@@ -1,0 +1,144 @@
+<style>
+  .about-datos {
+    margin: auto;
+    width: 100%;
+    height: 4rem;
+    max-width: 500px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    margin-bottom: 4vh;
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      max-width: 105px;
+      img {
+        width: 25px;
+      }
+    }
+  }
+  .carga-1 {
+    position: relative;
+  }
+
+  .carga-2 {
+    background-image: url("https://digitalassets.tesla.com/tesla-contents/image/upload/h_1620,w_2880,c_fit,f_auto,q_auto:best/Supercharger-Range-Hero-Desktop-NA");
+    background-image: url("./img/Carga-1-Range.avif");
+    height: 100vh;
+    position: relative;
+    .about-datos {
+      margin-bottom: 8rem;
+      color: #fff;
+    }
+  }
+  footer {
+    background-color: #000;
+  }
+</style>
+
+<div class="box-img carga-1">
+  <video autoplay muted loop>
+    <!-- <source
+      src="https://digitalassets.tesla.com/tesla-contents/video/upload/Supercharger-Main-Hero-Desktop-1920x1080.mp4"
+      type="video/mp4"
+    /> -->
+    <source src="./img/Carga-0-Main.mp4" type="video/mp4" />
+    Tu navegador no soporta este formato de video.
+  </video>
+  <div class="text">
+    <h1>Supercharger</h1>
+  </div>
+  <div class="about-datos">
+    <div class="item">
+      <h4>60,000+</h4>
+      <p>Superchargers globales</p>
+    </div>
+    <div class="item">
+      <h4>15 min</h4>
+      <p>Recarga hasta 282 km</p>
+    </div>
+    <div class="item">
+      <h4>$</h4>
+      <p>Menos que gasolina</p>
+    </div>
+  </div>
+</div>
+
+<div class="box-text white">
+  <div class="box-text-2">
+    <div class="container-text">
+      <span>Velocidad</span>
+      <h3>Mantente en el camino</h3>
+      <p>
+        Los Superchargers pueden agregar hasta 282 km de autonomía en solo 15
+        minutos. Dado que rara vez es necesario cargar por encima del 80 por
+        ciento, las paradas suelen ser breves y convenientes. Con una amplia red
+        de carga rápida, preacondicionamiento automático de la batería y la
+        excepcional autonomía de cada auto Tesla, pasarás aún más tiempo en la
+        carretera.
+      </p>
+    </div>
+    <div class="box-img carga-2">
+      <div class="about-datos">
+        <div class="item">
+          <h4>25%</h4>
+          <p>Más rápido con pre acondicionamiento de la batería</p>
+        </div>
+        <div class="item">
+          <h4>15 min</h4>
+          <p>Recarga hasta 282 km</p>
+        </div>
+        <div class="item">
+          <h4>250 kW</h4>
+          <p>Tasa de carga máxima</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-text">
+      <span>Planificador de ruta</span>
+      <h3>Introduce un destino</h3>
+      <p>
+        Ingresa tu destino en la pantalla táctil y el planificador de ruta
+        calculará automáticamente tu ruta con paradas en los Superchargers en el
+        camino. Planificador de ruta considera el estilo de manejo, la
+        elevación, la temperatura exterior, el tráfico, la disponibilidad de
+        cajones y más, ofreciendo una experiencia conveniente de puerta a
+        puerta.
+      </p>
+      <button>Ubícanos</button>
+    </div>
+    <!-- <img
+      src="https://digitalassets.tesla.com/tesla-contents/image/upload/h_950,w_800,c_fit,f_auto,q_auto:best/Supercharger-Trip-Planner-Hero-Mobile-EMEA-LHD"
+      alt=""
+    /> -->
+    <img src="./img/Carga-2-Trip-Planner.avif" alt="" />
+    <div class="container-text">
+      <span>Ahorros </span>
+      <h3>Más barato que la gasolina</h3>
+      <p>
+        El objetivo de la red de Superchargers es permitir la libertad de viajar
+        para los propietarios de Tesla a una fracción del costo de la gasolina.
+        Reduce tu costo por kilómetro y nunca más vuelvas a pagar por gasolina.
+      </p>
+      <button>Más información</button>
+    </div>
+    <!-- <img
+      src="https://digitalassets.tesla.com/tesla-contents/image/upload/h_950,w_800,c_fit,f_auto,q_auto:best/Supercharger-Savings-Hero-Mobile-NA"
+      alt=""
+    /> -->
+    <img src="./img/Carga-3-Savings.avif" alt="" />
+  </div>
+</div>
+
+<div class="box-text black">
+  <div class="container-text">
+    <h3>Albergar un Supercharger</h3>
+    <p>Solicita la instalación de un Supercharger en su negocio</p>
+    <button>Solicitar</button>
+  </div>
+</div>

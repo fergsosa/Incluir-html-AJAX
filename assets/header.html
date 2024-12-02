@@ -1,0 +1,170 @@
+<style>
+  .nav {
+    position: absolute;
+    top: 0;
+    width: 97vw;
+    z-index: 99;
+
+    .nav-container {
+      width: min(90%, 1080px);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      --icon-toggle-menu: url("./img/menu-open.svg");
+      --transform-menu-show: translate(-100%);
+
+      &:has(input[type="checkbox"]:checked) {
+        --icon-toggle-menu: url("./img/menu-close.svg");
+        --transform-menu-show: translate(0);
+      }
+
+      .nav-logo,
+      .nav-toggle {
+        z-index: 1;
+      }
+
+      .nav-logo {
+        width: 120px;
+        margin: 0;
+      }
+      .nav-toggle {
+        width: 30px;
+        height: 30px;
+        background-image: var(--icon-toggle-menu);
+        background-size: cover;
+        cursor: pointer;
+        transition: background-image 0.5s;
+
+        input[type="checkbox"] {
+          display: none;
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .nav-list {
+        transform: var(--transform-menu-show);
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        gap: 2rem;
+        text-align: center;
+        padding: 1.5rem 5%;
+        background-color: #000a;
+        backdrop-filter: blur(8px) saturate(180%);
+
+        list-style: none;
+        opacity: 1;
+        color: #fff;
+        text-shadow: 0 0 5px black;
+        transition: 0.5s transform;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      .nav-consulta {
+        display: none;
+
+        ul {
+          display: flex;
+          li {
+            margin-left: 1rem;
+            svg {
+              width: 24px;
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 764px) {
+    .nav {
+      .nav-container {
+        --transform-menu-show: translate(0);
+
+        .nav-toggle {
+          display: none;
+        }
+        .nav-list {
+          background-color: transparent;
+          position: static;
+          grid-auto-flow: column;
+          place-content: unset;
+          padding: 0;
+          transition: unset;
+          backdrop-filter: none;
+        }
+        .nav-consulta {
+          display: initial;
+        }
+      }
+    }
+  }
+</style>
+<nav class="nav">
+  <div class="nav-container">
+    <figure class="nav-logo">
+      <img src="./img/logo-tesla.svg" alt="logo" />
+    </figure>
+
+    <label class="nav-toggle">
+      <input type="checkbox" />
+    </label>
+
+    <ul class="nav-list menu">
+      <li>
+        <a href="./assets/home.html">Inicio</a>
+      </li>
+
+      <li>
+        <a href="./assets/acerca.html">Acerca</a>
+      </li>
+
+      <li>
+        <a href="./assets/carga.html">Carga</a>
+      </li>
+
+      <li>
+        <a href="./assets/trabajo.html">Bolsa de trabajo</a>
+      </li>
+    </ul>
+
+    <div class="nav-consulta">
+      <ul>
+        <li>
+          <svg
+            class="tds-icon tds-icon-help"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="currentColor"
+              d="M12 20.5a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17m0 1.5c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m0-6a1 1 0 1 0 0 2 1 1 0 0 0 0-2m.053-3.533a8 8 0 0 1 .92-.767 7 7 0 0 0 .746-.61 2.3 2.3 0 0 0 .468-.635q.189-.38.188-.883 0-.56-.246-1.048-.237-.486-.771-.792-.534-.305-1.362-.305-.862 0-1.411.347a2 2 0 0 0-.788.89q-.09.201-.148.413c-.111.414-.445.767-.874.767-.428 0-.784-.35-.71-.772q.106-.61.386-1.15.452-.875 1.37-1.394Q10.742 6 12.07 6q1.395 0 2.273.544.885.536 1.271 1.337T16 9.489q0 .817-.254 1.403-.255.577-.616.94-.353.363-.943.817-.468.372-.747.635-.27.264-.451.627-.075.149-.113.302c-.108.424-.422.787-.86.787-.437 0-.806-.356-.76-.79a2.95 2.95 0 0 1 .797-1.743"
+            ></path>
+          </svg>
+        </li>
+
+        <li>
+          <svg
+            class="tds-icon tds-icon-globe"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="currentColor"
+              d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10M9.254 20.047a8 8 0 0 1-.768-1.378c-.404-.91-.722-1.985-.935-3.169h-3.3a8.53 8.53 0 0 0 5.003 4.547m.603-1.988c.336.757.718 1.324 1.103 1.69.382.364.732.501 1.04.501s.658-.137 1.04-.5c.385-.367.767-.934 1.103-1.69.321-.723.588-1.59.78-2.56H9.076c.192.97.459 1.837.78 2.56ZM8.75 12q.001 1.038.103 2h6.294q.102-.962.103-2-.001-1.038-.103-2H8.853q-.102.962-.103 2m-1.405-2H3.737a8.5 8.5 0 0 0-.237 2c0 .689.082 1.359.237 2h3.608a21 21 0 0 1 0-4m1.732-1.5h5.845c-.19-.97-.458-1.837-.779-2.56-.336-.756-.718-1.323-1.103-1.69-.382-.363-.732-.5-1.04-.5s-.658.137-1.04.5c-.385.367-.767.934-1.103 1.69-.321.723-.588 1.59-.78 2.56m7.577 1.5a20.7 20.7 0 0 1 0 4h3.61a8.5 8.5 0 0 0 .236-2 8.5 8.5 0 0 0-.237-2zm3.094-1.5a8.53 8.53 0 0 0-5.002-4.547c.287.408.543.873.768 1.378.404.91.722 1.985.935 3.169h3.3Zm-12.197 0c.213-1.184.531-2.26.935-3.169.225-.505.48-.97.768-1.378A8.53 8.53 0 0 0 4.252 8.5zm7.963 10.169c-.225.505-.48.97-.768 1.378a8.53 8.53 0 0 0 5.002-4.547h-3.3c-.212 1.184-.53 2.26-.934 3.169"
+            ></path>
+          </svg>
+        </li>
+      </ul>
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</nav>

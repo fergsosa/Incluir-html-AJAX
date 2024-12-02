@@ -158,7 +158,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 100svh;
   background-size: cover;
   background-position: center;
   text-align: center;

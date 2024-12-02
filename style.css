@@ -1,7 +1,6 @@
 /* ********** Custom Properties ********** */
 :root {
   --bg-nav-bar: #161617cc;
-  /* * filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px))) */
 
   --bg-dark: #242424;
   --bg-light: #e4e4e4;
@@ -92,18 +91,15 @@ h1 {
 h2 {
   font-size: var(--step-32);
   margin: 0;
-  /* margin: auto; */
 }
 
 h3 {
   font-size: var(--step-20);
   margin: 0;
-  /* margin: auto; */
 }
 h4 {
   font-size: var(--step-16);
   margin: 0;
-  /* margin: auto; */
 }
 h5 {
   font-size: var(--step-13);
@@ -264,7 +260,6 @@ main {
   ul {
     max-width: 1080px;
     display: flex;
-    /* justify-content: space-around; */
     li {
       margin: 0 1rem;
     }

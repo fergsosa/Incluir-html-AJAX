@@ -1,35 +1,10 @@
 /* ********** Custom Properties ********** */
 :root {
-  --bg-nav-bar: #161617cc;
-
-  --bg-dark: #242424;
-  --bg-light: #e4e4e4;
-
-  --marcador: #fff5;
-
-  --first-color: #18c;
-  --first-alpha-color: #15a;
-  --second-color: #ff0;
-  --second-alpha-color: #990;
-  --third-color: #f00;
-  --third-alpha-color: #a00;
-
-  --white-alpha-color: #fff8;
-  --black-alpha-color: #0008;
-
-  --link-color: #2997ff;
-  --title: #333;
-  --title-dark: #ddd;
   --text: #222;
   --text-dark: #eee;
 
   --font-first: "Inter";
   --font-second: "Helvetica", sans-serif;
-
-  --btn-first: #18f;
-
-  --max-width: 1024px;
-  --header-height: 4rem;
 
   --step-64: clamp(3.875rem, 3.8295rem + 0.2273vw, 4rem);
   --step-54: clamp(3.25rem, 3.1875rem + 0.3125vw, 3.375rem);
